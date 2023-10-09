@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Hello World",
+            "command": "nim c -d:release --opt:size --checks:off --stackTrace:off hello.nim; strip -s hello.exe",
+            "type": "shell",
+            "args": [],
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": "build"
+        },
+
+        {
+            "label": "Build Batchman",
+            "command": "nim c -d:release --opt:size --checks:off --stackTrace:off batchman.nim; strip -s batchman.exe; copy batchman.exe \"C:\\Users\\b.duncan\\Documents\\git\\bin\"",
+            "type": "shell",
+            "args": [],
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": "build"
+        }
+    ]
+}
